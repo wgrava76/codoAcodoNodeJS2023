@@ -1,6 +1,6 @@
 
 const adminControllers = {
-    adminhome:(req,res)=>res.send('Route for Admin view') ,
+    adminhome:(req,res)=>res.render('admin') ,
     adminCreate:(req,res)=>res.send('Route for find and retrieve a product by ID') ,
     adminCreateAdd:(req,res)=>res.send('Route for add the current item to the web catalog') ,
     adminEdit:(req,res)=>res.send('Route for edit a product by ID'),

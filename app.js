@@ -1,9 +1,14 @@
 const express = require("express");
+const path = require('path');
+
 const app = express();
 const mainRoutes = require('./src/routes/mainRoutes');
 const shopRoutes = require('./src/routes/shopRoutes');
 const adminRoutes = require('./src/routes/adminRoutes');
 const authRoutes = require('./src/routes/authRoutes');
+
+app.set('views',path.join(__dirname,'./src/views'));
+app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
